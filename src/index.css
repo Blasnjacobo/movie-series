@@ -1,13 +1,69 @@
-body {
+*{
+  box-sizing: content-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.Navbar-section{
+  height: 8vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.845);
+}
+
+#logo{
+  width: 11vw;
+  height: 5vh;
+  background-color: rgba(245,197,24,255);
+  color: black;
+  font-weight: bold;
+  font-family: Roboto, Helvetica;
+  font-size: 1.8vw;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 5vh;
+  margin: 1vw;
+}
+
+#search{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.checkbox{
+  color: 'hsl(0, 0%, 40%)';
+  display: 'inline-block';
+  font-size:  1vw;
+  font-family: 'italic';
+  line-height: 5vh;
+}
+
+.basic-single{
+  color: black;
+  margin-right: 0;
+  width: 15vw;
+  line-height: 3.8vh;
+}
+
+.input-navbar{
+  width: 25vw;
+  border-radius: 5px;
+  line-height: 5.5vh;
+  padding: 0;
+
+}
+
+#divide{
+  height: 5vh;
+  width: 0.1vw;
+  margin: 0.8rem;
+  text-align: center; background-color: gray;
+}
+
+.watchLater{
+  font-size: 1.5vw;
+  width: 14vw;
 }
