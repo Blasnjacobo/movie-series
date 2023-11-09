@@ -67,3 +67,97 @@
   font-size: 1.5vw;
   width: 14vw;
 }
+
+.upcomingImg{
+  width: 60vw;
+  height: 63vh;
+  margin-top: 10vh;
+  display:inline-block;
+  -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,0) 0%,rgba(0,0,0,3) 40%);
+  display: block;
+}
+.upcoming-mainleft{
+  left: 8%;
+}
+
+.upcoming-mainright{
+  left: 61%;
+}
+
+.upcoming-mainleft, .upcoming-mainright{
+  color:white;
+  background-color: rgba(24, 23, 23, 0.189);
+  width: 3vw;
+  height: 7vh;
+  position: absolute;
+  bottom: 50%;
+  text-align: center;
+  line-height: 7vh;
+  border: 1px solid white;
+}
+
+.upcoming-mainleft:hover, .upcoming-mainright:hover{
+  cursor: pointer;
+  color: yellow;
+}
+.upcoming-mainDescription{
+  color: white;
+  width: 40vw;
+}
+
+.upcoming-mainUpper{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.upcoming-mainTime{
+  display: flex;
+  gap: 1rem;
+  margin-left: 5vw;
+}
+
+.upcomingSection{
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  height: 100vh;
+  gap: 3vw;
+}
+
+.upcoming-rightSection{
+  margin-top: 10vh;
+}
+
+.upcomingTitle{
+  color: yellow;
+}
+
+.upcomingMovie{
+  display: flex;
+  color: white;
+  width: 25vw;
+  height: 24vh;
+  background-color: rgba(122, 116, 116, 0.139);
+}
+
+.upcoming-littlePic{
+  width: 8vw;
+  height: 19vh;
+  margin: 1rem 1rem;
+}
+
+.upcoming-Time{
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  gap: 0.5rem;
+}
+
+.upcoming-TimeTitleS{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  margin-top: 1rem;
+}
