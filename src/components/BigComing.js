@@ -1,12 +1,14 @@
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
 import React from 'react'
 import { faCheckToSlot, faAngleRight, faAngleLeft } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-const BigComing = ({ Data }) => {
+const BigComing = ({ Data, handleClick, handleclickLeft }) => {
   const slot = <FontAwesomeIcon icon={faCheckToSlot} style={{ color: '#ffffff' }} />
   const right = <FontAwesomeIcon icon={faAngleRight} size='2xl' />
   const left = <FontAwesomeIcon icon={faAngleLeft} size='2xl' />
-  console.log(Data)
+
   return (
     <div className='upcoming-main'>
       <div>
@@ -15,8 +17,8 @@ const BigComing = ({ Data }) => {
           alt='randomly poster from upcoming movies'
           className='upcomingImg'
         />
-        <span className='upcoming-mainleft'>{left}</span>
-        <span className='upcoming-mainright'>{right}</span>
+        <span className='upcoming-mainright' onClick={handleClick}>{right}</span>
+        <span className='upcoming-mainleft' onClick={handleclickLeft}>{left}</span>
       </div>
       <div>
         <div className='upcoming-mainDescription'>
@@ -27,7 +29,7 @@ const BigComing = ({ Data }) => {
               <h3>Vote Average: {Data.vote_average}</h3>
             </div>
           </div>
-          <p>{Data.overview}</p>
+          <p className='upcoming-overview'>{Data.overview}</p>
         </div>
       </div>
     </div>

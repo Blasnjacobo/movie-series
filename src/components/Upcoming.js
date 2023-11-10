@@ -1,17 +1,40 @@
-import React from 'react'
+/* eslint-disable no-unused-vars */
+import { useState } from 'react'
 import LittleComing from './LittleComing'
 import BigComing from './BigComing'
 
 const Upcoming = ({ Data }) => {
+  const [index, setIndex] = useState(0)
+  const [rightClick, setRightclick] = useState(index)
+  const [leftClick, setLeftclick] = useState(index)
+
+  const handleClick = () => {
+    console.log('clicked')
+    if (index === 16) { setIndex(0) } else { setIndex(index + 1) }
+  }
+
+  const handleclickLeft = () => {
+    console.log('clicked')
+    if (index === 0) { setIndex(16) } else { setIndex(index - 1) }
+  }
+  console.log(index)
+
   console.log(Data)
   return (
     <div className='upcomingSection'>
-      <BigComing Data={Data[0]} />
+      {/* <BigComing Data={Data[index]} handleClick={handleClick} /> */}
+      <BigComing Data={Data[index]} handleClick={handleClick} handleclickLeft={handleclickLeft} />
+
       <div className='upcoming-rightSection'>
         <h3 className='upcomingTitle'>Upcoming</h3>
-        <LittleComing Data={Data[1]} />
-        <LittleComing Data={Data[2]} />
-        <LittleComing Data={Data[3]} />
+        {/* <LittleComing Data={Data[index + 1]} /> */}
+        <LittleComing Data={Data[index + 1]} />
+
+        {/* <LittleComing Data={Data[index + 2]} /> */}
+        <LittleComing Data={Data[index + 2]} />
+
+        {/* <LittleComing Data={Data[index + 3]} /> */}
+        <LittleComing Data={Data[index + 3]} />
       </div>
     </div>
   )

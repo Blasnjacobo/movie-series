@@ -102,7 +102,11 @@
 }
 .upcoming-mainDescription{
   color: white;
-  width: 40vw;
+  width: 50vw
+}
+
+.upcoming-overview{
+  font-size: 1rem;
 }
 
 .upcoming-mainUpper{
