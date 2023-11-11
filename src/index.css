@@ -176,7 +176,7 @@
   color: white;
 }
 
-.pag1-section{
+.allMovies-section{
   margin: 0 3vw;
   display: grid;
   grid-gap: 3vw;
@@ -189,6 +189,7 @@
   width: 100%;
   background-color: rgba(26,26,26,255);
   cursor: pointer;
+  margin-top: 3vh;
 }
 
 .movie-image{
