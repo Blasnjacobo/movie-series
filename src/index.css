@@ -103,7 +103,7 @@
 }
 .upcoming-mainDescription{
   color: white;
-  width: 50vw
+  width: 50vw;
 }
 
 .upcoming-overview{
@@ -175,3 +175,24 @@
 .movieTitle{
   color: white;
 }
+
+.pag1-section{
+  margin: 0 3vw;
+  display: grid;
+  grid-gap: 3vw;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  background-color: black;
+}
+
+.movie-section{
+  height: 55vh;
+  width: 100%;
+  background-color: rgba(26,26,26,255);
+  cursor: pointer;
+}
+
+.movie-image{
+  height: 40vh;
+  width: 100%;
+}
+
