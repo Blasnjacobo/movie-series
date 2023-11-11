@@ -1,5 +1,5 @@
 import React from 'react'
-import Header from './Header'
+import Header from './components/navbar/Header'
 import { Route, Routes } from 'react-router-dom'
 import HomePage from './pages/HomePage'
 import ItemPage from './pages/ItemPage'

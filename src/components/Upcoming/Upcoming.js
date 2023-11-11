@@ -5,8 +5,6 @@ import BigComing from './BigComing'
 
 const Upcoming = ({ Data }) => {
   const [index, setIndex] = useState(0)
-  const [rightClick, setRightclick] = useState(index)
-  const [leftClick, setLeftclick] = useState(index)
 
   const handleClick = () => {
     console.log('clicked')
@@ -26,7 +24,7 @@ const Upcoming = ({ Data }) => {
       <BigComing Data={Data[index]} handleClick={handleClick} handleclickLeft={handleclickLeft} />
 
       <div className='upcoming-rightSection'>
-        <h3 className='upcomingTitle'>Upcoming</h3>
+        <h3 className='upcomingTitle'>Last release</h3>
         {/* <LittleComing Data={Data[index + 1]} /> */}
         <LittleComing Data={Data[index + 1]} />
 

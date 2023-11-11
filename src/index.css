@@ -14,13 +14,13 @@
 }
 
 #logo{
-  width: 11vw;
+  width: 13vw;
   height: 5vh;
-  background-color: rgba(245,197,24,255);
-  color: black;
+  background-color: gray;
+  color: rgb(255, 255, 255);
   font-weight: bold;
   font-family: Roboto, Helvetica;
-  font-size: 1.8vw;
+  font-size: 1.4vw;
   border-radius: 5px;
   text-align: center;
   line-height: 5vh;
@@ -98,7 +98,8 @@
 
 .upcoming-mainleft:hover, .upcoming-mainright:hover{
   cursor: pointer;
-  color: yellow;
+  color: rgb(0, 0, 0);
+  background-color: white;
 }
 .upcoming-mainDescription{
   color: white;
@@ -134,7 +135,7 @@
 }
 
 .upcomingTitle{
-  color: yellow;
+  color: rgb(255, 255, 255)
 }
 
 .upcomingMovie{
@@ -164,4 +165,13 @@
   justify-content: start;
   align-items: start;
   margin-top: 1rem;
+}
+
+.moviesDisplay-section{
+  background-color: black;
+  color: white;
+}
+
+.movieTitle{
+  color: white;
 }
