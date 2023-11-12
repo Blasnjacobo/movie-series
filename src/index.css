@@ -170,10 +170,12 @@
 .moviesDisplay-section{
   background-color: black;
   color: white;
+  text-decoration: none;
 }
 
 .movieTitle{
   color: white;
+  text-decoration: none;
 }
 
 .allMovies-section{
@@ -197,3 +199,7 @@
   width: 100%;
 }
 
+.linkItem{
+  text-decoration: none;
+  color: white;
+}
