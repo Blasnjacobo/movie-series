@@ -1,3 +1,6 @@
+/* eslint-disable react/jsx-curly-brace-presence */
+/* eslint-disable quotes */
+/* eslint-disable no-return-assign */
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/jsx-key */
 /* eslint-disable no-lone-blocks */
@@ -6,6 +9,7 @@ import { Link } from 'react-router-dom'
 // import ItemPage from '../../pages/ItemPage'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
+import ItemPage from '../../pages/ItemPage'
 
 const Movie = (props) => {
   console.log('entering Movie')
@@ -20,8 +24,9 @@ const Movie = (props) => {
         <div className='movie-section'>
           <Link
             className='linkItem'
-            to={`/movie-series/movie/${movie}`}
+            to={`/movie-series/movie/${movie.id}/${movie.title}/${movie.overview}/${movie.vote_average}/${movie.vote_count}/${movie.release_date}/${movie.original_language}/${movie.adult}/${movie.poster_path.substring(1, ((movie.poster_path.length) - 4))}`}
           >
+            <ItemPage movie={movie} />
             <img className='movie-image' src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt='movie poster generated' />
             <div className='movie-description'>
               <span className='movie-star'>{star} {movie.vote_average}</span>
