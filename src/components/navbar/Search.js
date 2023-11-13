@@ -7,7 +7,7 @@ const Search = () => {
         className='input-navbar'
         type='text'
         name='search'
-        placeholder='Type your request name'
+        placeholder='Type your movie name'
       />
     </div>
   )

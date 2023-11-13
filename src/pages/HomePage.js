@@ -7,6 +7,7 @@ const HomePage = () => {
   return (
     <div>
       <Homeupcoming />
+      <h2 className='initial-description'> Popular on Blas Movieland</h2>
       <MoviesDisplay />
     </div>
   )

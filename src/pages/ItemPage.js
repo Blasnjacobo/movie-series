@@ -9,14 +9,19 @@ const ItemPage = () => {
       <div className='item-description'>
         <h1 className='item-title'>{title}</h1>
         <br />
-        <h2>{overview}</h2>
+        <h2 className='item-overview'>{overview}</h2>
         <div className='items-info'>
-          <h3>Vote Average: {voteAverage}</h3>
-          <h3>Vote Count: {voteCount}</h3>
-          <h3>Release Date: {releaseDate}</h3>
-          <h3>Original Language: {originalLanguage}</h3>
-          <h3>Adults only: {adult}</h3>
+          <div className='vote-items'>
+            <h3>Vote Average: {voteAverage}</h3>
+            <h3>Vote Count: {voteCount}</h3>
+          </div>
+          <div className='extraInfo-items'>
+            <h3>Release Date: {releaseDate}</h3>
+            <h3>Original Language: {originalLanguage}</h3>
+          </div>
         </div>
+        <h3 className='adultsonly-items'>Adults only: {adult}</h3>
+        <button className='goback-button'><a className='go-back' href='/movie-series'>Go back to the main page</a></button>
       </div>
     </div>
   )
