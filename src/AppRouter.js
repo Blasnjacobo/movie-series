@@ -10,7 +10,7 @@ const AppRouter = () => {
       <Header />
       <Routes>
         <Route path='/movie-series' element={<HomePage />} />
-        <Route path='/movie-series/movie/:id/:title/:overview/:voteAverage/:voteCount/:releaseDate/:originalLanguage/:adult/:posterPath' element={<ItemPage />} />
+        <Route path='/movie-series/movie/:title/:overview/:voteAverage/:voteCount/:releaseDate/:originalLanguage/:adult/:posterPath' element={<ItemPage />} />
       </Routes>
 
     </>

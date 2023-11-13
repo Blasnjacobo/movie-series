@@ -10,7 +10,7 @@ const MoviesDisplay = () => {
   useEffect(() => {
     console.log('fase effect')
     const arr = []
-    for (let i = 1; i <= 8; i++) {
+    for (let i = 1; i <= 20; i++) {
       arr.push(i)
     }
     const fetchData = async (index) => {

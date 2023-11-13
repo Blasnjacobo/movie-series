@@ -24,9 +24,8 @@ const Movie = (props) => {
         <div className='movie-section'>
           <Link
             className='linkItem'
-            to={`/movie-series/movie/${movie.id}/${movie.title}/${movie.overview}/${movie.vote_average}/${movie.vote_count}/${movie.release_date}/${movie.original_language}/${movie.adult}/${movie.poster_path.substring(1, ((movie.poster_path.length) - 4))}`}
+            to={`/movie-series/movie/${movie.title}/${movie.overview}/${movie.vote_average}/${movie.vote_count}/${movie.release_date}/${movie.original_language}/${movie.adult}/${movie.poster_path.substring(1, ((movie.poster_path.length) - 4))}`}
           >
-            <ItemPage movie={movie} />
             <img className='movie-image' src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt='movie poster generated' />
             <div className='movie-description'>
               <span className='movie-star'>{star} {movie.vote_average}</span>
