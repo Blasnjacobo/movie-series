@@ -23,7 +23,7 @@ const Movie = (props) => {
   return (
     <div>
       {result.map((movie) =>
-        movie.title === text &&
+        movie.title.toLowerCase().includes(text) &&
           <div className='movie-section'>
             <Link
               className='linkItem'
