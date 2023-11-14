@@ -3,11 +3,14 @@
 import React from 'react'
 import Movie from './Movie'
 
-const MovieList = ({ movieData }) => {
-  console.log(movieData)
+const MovieList = (props) => {
+  const { text, movieData } = props
+  console.log(movieData + ' movieData')
+  console.log(text)
+  console.log(typeof movieData + ' typeof movieData')
   return (
     <div className='allMovies-section'>
-      {movieData.map((movie) => <Movie {...movie} />)}
+      {movieData.map((pages) => <Movie {...pages} text={text} />)}
     </div>
   )
 }

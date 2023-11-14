@@ -3,8 +3,9 @@
 import { useEffect, useState } from 'react'
 import MovieList from './MovieList'
 
-const MoviesDisplay = () => {
+const MoviesDisplay = ({ text }) => {
   const [movieData, setMoviedata] = useState([])
+  console.log(text)
   // console.log('fase inicio')
 
   useEffect(() => {
@@ -36,7 +37,7 @@ const MoviesDisplay = () => {
     <div className='moviesDisplay-section'>
       {/* {console.log('fase return')} */}
       {/* {(movieData !== 'null') && <MovieList movieData={movieData} />} */}
-      {(movieData !== 'null') && <MovieList movieData={movieData} />}
+      {((typeof movieData !== 'string') && movieData.length > 0) && <MovieList movieData={movieData} text={text} />}
     </div>
   )
 }
