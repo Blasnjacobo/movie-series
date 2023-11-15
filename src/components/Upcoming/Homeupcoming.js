@@ -4,14 +4,13 @@ import Upcoming from './Upcoming'
 // import useLocalStorage from './useLocalStorage'
 
 const Homeupcoming = () => {
-  const [Data, setData] = useState(window.localStorage.getItem('Data'))
+  const [Data, setData] = useState([])
   console.log('fase initial homecomming function')
 
   const getMovie = () => {
     fetch('https://api.themoviedb.org/3/movie/upcoming?api_key=5775063d28cc26a60e7e47301c5aa679')
       .then(res => res.json())
       .then(json => setData(json.results))
-    window.localStorage.setItem('Data', Data)
   }
 
   useEffect(() => {
