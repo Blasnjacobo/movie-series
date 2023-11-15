@@ -27,7 +27,7 @@ const Homeupcoming = () => {
       {console.log(Data)}
       {console.log(typeof Data)}
       {/* <Upcoming Data={Data} /> */}
-      {((typeof Data !== 'string') && (Data.length > 0) && (Data.length !== null)) && <Upcoming Data={Data} />}
+      {((typeof Data !== 'string') && (Data.length > 0)) && <Upcoming Data={Data} />}
     </div>
   )
 }
