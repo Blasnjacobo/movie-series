@@ -15,7 +15,7 @@ const AppRouter = () => {
   return (
     <>
       <Routes>
-        <Route path='/movie-series' element={<HomePage />} />
+        <Route path='/' element={<HomePage />} />
         <Route path='/movie-series/movie/:title/:overview/:voteAverage/:voteCount/:releaseDate/:originalLanguage/:adult/:posterPath' element={<ItemPage handleClick={handleClick} />} />
         <Route path='/movie-series/movie/watchList' element={<WatchLater favorite={favorite} />} />
       </Routes>
