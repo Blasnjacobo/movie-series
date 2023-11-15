@@ -29,6 +29,7 @@
   margin: 1vw;
 }
 
+
 #search{
   display: flex;
   justify-content: center;
@@ -52,15 +53,15 @@
 .watchLater{
   font-size: 1.5vw;
   width: 14vw;
+  text-decoration: none;
+  color: white;
 }
+
 
 .upcomingImg{
   width: 60vw;
   height: 63vh;
   margin-top: 10vh;
-  display:inline-block;
-  -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,0) 0%,rgba(0,0,0,3) 40%);
-  display: block;
 }
 .upcoming-mainleft{
   left: 8%;
@@ -176,16 +177,44 @@
 div:empty { display: none }
 
 .movie-section{
-  height: 60vh;
+  height: 50vh;
   width: 100%;
   background-color: rgba(26,26,26,255);
   cursor: pointer;
   margin-top: 3vh;
 }
 
+.icon-container{
+  position: relative;
+}
+
 .movie-image{
   height: 40vh;
   width: 100%;
+  position: block;
+}
+
+.bookmark-container{
+  position: absolute; 
+  bottom:86%; 
+  left:5%;
+  background-color: rgba(153, 153, 153, 0.242);
+  width: 2rem;
+  height: 3rem;
+  opacity: 0.7;
+  text-align: center;
+}
+
+.bookmark-movie:hover{
+  color: black;
+}
+
+.bookmark-container:hover{
+  background-color: yellow;
+}
+
+.title-watchList{
+  display: relative;
 }
 
 .linkItem{
@@ -224,6 +253,16 @@ width: 60%;
   justify-content: center;
   align-items: start;
 }
+.button-bookmark{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30vw;
+}
+
+.Itempage-bookmark{
+  cursor: pointer;
+}
 
 .item-title{
   font-family: cursive;
@@ -233,7 +272,7 @@ width: 60%;
 }
 
 .item-overview{
-  font-size: 3.5vh;
+  font-size: 3vh;
 }
 
 .go-back{
@@ -246,6 +285,7 @@ width: 60%;
   border-radius: 7px;
   padding: 0.5rem;
   margin-top: 1.5rem;
+  font-size: 1vw;
 }
 
 .initial-description{

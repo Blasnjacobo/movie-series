@@ -1,12 +1,18 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faStar } from '@fortawesome/free-solid-svg-icons'
+import { faBookmark } from '@fortawesome/free-solid-svg-icons'
+import { Link } from 'react-router-dom'
 
 const ToWatch = () => {
-  const element = <FontAwesomeIcon icon={faStar} />
+  const element = <FontAwesomeIcon style={{ color: 'white' }} icon={faBookmark} />
   return (
     <section>
-      <h1 className='watchLater'>Watch Later List {element}</h1>
+      <Link
+        className='watchLater'
+        to='/movie-series/movie/watchList'
+      >
+        <h1>Library including movies from this year {element}</h1>
+      </Link>
     </section>
   )
 }

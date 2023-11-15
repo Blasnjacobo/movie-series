@@ -12,20 +12,20 @@ const BigComing = ({ Data, handleClick, handleclickLeft }) => {
 
   return (
     <div className='upcoming-main'>
-      <div>
-        <img
-          src={`https://image.tmdb.org/t/p/w500${Data.poster_path}`}
-          alt='randomly poster from upcoming movies'
-          className='upcomingImg'
-        />
-        <span className='upcoming-mainright' onClick={handleClick}>{right}</span>
-        <span className='upcoming-mainleft' onClick={handleclickLeft}>{left}</span>
-      </div>
-      <div>
-        <Link
-          className='linkItem'
-          to={`/movie-series/movie/${Data.title}/${Data.overview}/${Data.vote_average}/${Data.vote_count}/${Data.release_date}/${Data.original_language}/${Data.adult}/${Data.poster_path.substring(1, ((Data.poster_path.length) - 4))}`}
-        >
+      <span className='upcoming-mainright' onClick={handleClick}>{right}</span>
+      <span className='upcoming-mainleft' onClick={handleclickLeft}>{left}</span>
+      <Link
+        className='linkItem'
+        to={`/movie-series/movie/${Data.title}/${Data.overview}/${Data.vote_average}/${Data.vote_count}/${Data.release_date}/${Data.original_language}/${Data.adult}/${Data.poster_path.substring(1, ((Data.poster_path.length) - 4))}`}
+      >
+        <div>
+          <img
+            src={`https://image.tmdb.org/t/p/w500${Data.poster_path}`}
+            alt='randomly poster from upcoming movies'
+            className='upcomingImg'
+          />
+        </div>
+        <div>
           <div className='upcoming-mainDescription'>
             <div className='upcoming-mainUpper'>
               <h1>{Data.original_title}</h1>
@@ -36,8 +36,8 @@ const BigComing = ({ Data, handleClick, handleclickLeft }) => {
             </div>
             <p className='upcoming-overview'>{Data.overview}</p>
           </div>
-        </Link>
-      </div>
+        </div>
+      </Link>
     </div>
   )
 }
