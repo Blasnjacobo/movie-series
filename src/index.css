@@ -177,7 +177,7 @@
 div:empty { display: none }
 
 .movie-section{
-  height: 50vh;
+  height: 53vh;
   width: 100%;
   background-color: rgba(26,26,26,255);
   cursor: pointer;
@@ -196,7 +196,7 @@ div:empty { display: none }
 
 .bookmark-container{
   position: absolute; 
-  bottom:86%; 
+  bottom:83%; 
   left:5%;
   background-color: rgba(153, 153, 153, 0.242);
   width: 2rem;
