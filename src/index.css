@@ -174,7 +174,7 @@
   background-color: black;
 }
 
-div:empty { display: none }
+.general-movies-section:empty { display: none }
 
 .movie-section{
   height: 53vh;
@@ -196,7 +196,7 @@ div:empty { display: none }
 
 .bookmark-container{
   position: absolute; 
-  bottom:83%; 
+  bottom:80%; 
   left:5%;
   background-color: rgba(153, 153, 153, 0.242);
   width: 2rem;

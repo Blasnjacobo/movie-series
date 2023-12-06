@@ -16,17 +16,18 @@ const Movie = (props) => {
   const Bookmark = <FontAwesomeIcon className='bookmark-movie' icon={faBookmark} size='2xl' style={{ color: "white" }} />
 
   return (
-    <div>
+    <div className='general-movies-section'>
       {result.map((movie) =>
         movie.title.toLowerCase().includes(text) &&
           <div className='movie-section'>
+            {console.log(movie)}
             <Link
               className='linkItem'
               to={`/movie-series/movie/${movie.title}/${movie.overview}/${movie.vote_average}/${movie.vote_count}/${movie.release_date}/${movie.original_language}/${movie.adult}/${movie.poster_path.substring(1, ((movie.poster_path.length) - 4))}`}
             >
               <div className='icon-container'>
                 <img className='movie-image' src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt='movie poster generated' />
-                {(movie.release_date.substring(0, 4) === '2023') &&
+                {(movie.release_date !== undefined && (movie.release_date.substring(0, 4) === '2023' || movie.release_date.substring(0, 4) === '2023')) &&
                   <div className='bookmark-container'>{Bookmark}</div>}
               </div>
               <div className='movie-description'>
