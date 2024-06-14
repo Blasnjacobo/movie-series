@@ -1,11 +1,4 @@
-/* eslint-disable react/jsx-curly-brace-presence */
-/* eslint-disable quotes */
-/* eslint-disable no-return-assign */
-/* eslint-disable no-unused-vars */
-/* eslint-disable react/jsx-key */
-/* eslint-disable no-lone-blocks */
 import { Link } from 'react-router-dom'
-// import ItemPage from '../../pages/ItemPage'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar, faBookmark } from '@fortawesome/free-solid-svg-icons'
 
@@ -13,21 +6,21 @@ const Movie = (props) => {
   const result = props.results
   const text = props.text
   const star = <FontAwesomeIcon icon={faStar} style={{ color: '#ffea00' }} />
-  const Bookmark = <FontAwesomeIcon className='bookmark-movie' icon={faBookmark} size='2xl' style={{ color: "white" }} />
+  const Bookmark = <FontAwesomeIcon className='bookmark-movie' icon={faBookmark} size='2xl' style={{ color: 'white' }} />
 
   return (
     <div className='general-movies-section'>
       {result.map((movie) =>
         movie.title.toLowerCase().includes(text) &&
-          <div className='movie-section'>
+          <div className='movie-section' key={movie.id}>
             {console.log(movie)}
             <Link
               className='linkItem'
-              to={`/movie-series/movie/${movie.title}/${movie.overview}/${movie.vote_average}/${movie.vote_count}/${movie.release_date}/${movie.original_language}/${movie.adult}/${movie.poster_path.substring(1, ((movie.poster_path.length) - 4))}`}
+              to={`/movie-series/movie/${movie.title}/${movie.overview}/${movie.vote_average}/${movie.vote_count}/${movie.release_date}/${movie.original_language}/${movie.adult}/${movie.poster_path ? movie.poster_path.substring(1, movie.poster_path.length - 4) : ''}`}
             >
               <div className='icon-container'>
-                <img className='movie-image' src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt='movie poster generated' />
-                {(movie.release_date !== undefined && (movie.release_date.substring(0, 4) === '2023' || movie.release_date.substring(0, 4) === '2023')) &&
+                <img className='movie-image' src={movie.poster_path ? `https://image.tmdb.org/t/p/w500${movie.poster_path}` : 'default-image-url.jpg'} alt={`${movie.title} poster`} />
+                {(movie.release_date.substring(0, 4) === '2023') &&
                   <div className='bookmark-container'>{Bookmark}</div>}
               </div>
               <div className='movie-description'>
